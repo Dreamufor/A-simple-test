@@ -2,6 +2,7 @@ import { FC } from 'react';
 import RegisterForm from '../../components/registerForm';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 interface RegisterProps {}
 
@@ -9,9 +10,9 @@ const Register: FC<RegisterProps> = () => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full flex relative px-1 py-2">
-        <div className="absolute left-2 cursor-pointer">
+        <Link className="absolute left-2 cursor-pointer" to="/menu">
           <MenuIcon />
-        </div>
+        </Link>
         <div className="w-full text-center">Register card form</div>
       </div>
       <hr className="w-full" />
