@@ -1,6 +1,5 @@
 import React, { createContext, FC } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
 import Layout from './containers/layout';
 import { Routes } from './Routes';
 
