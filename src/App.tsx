@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { createContext, FC } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './containers/layout';
 import { Routes } from './Routes';
 
-function App() {
+interface User {
+  firstName: string;
+  lastName: string;
+}
+
+const currentUser: User = { firstName: 'Michelle', lastName: 'Zhang' };
+
+export const UserContext = createContext<User>(currentUser);
+
+const App: FC = () => {
   return (
     <BrowserRouter>
       <Layout>
@@ -12,6 +21,6 @@ function App() {
       </Layout>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
