@@ -14,11 +14,13 @@ export const UserContext = createContext<User>(currentUser);
 
 const App: FC = () => {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes />
-      </Layout>
-    </BrowserRouter>
+    <UserContext.Provider value={currentUser}>
+      <BrowserRouter>
+        <Layout>
+          <Routes />
+        </Layout>
+      </BrowserRouter>
+    </UserContext.Provider>
   );
 };
 
